@@ -1,0 +1,22 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Datify-iOS' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+ 
+  #  Animation Libraries
+  pod 'NeumorphismKit', '~> 0.2'
+  pod 'ShiftTransitions'
+  pod 'AdvancedPageControl'
+  pod 'BRYXBanner'
+  pod 'lottie-ios'
+  pod 'Hero'
+  pod 'SimpleAnimation'
+  pod 'GSImageViewerController'
+  pod 'SkeletonView'
+  pod 'MBProgressHUD'
+  pod "TweenKit"
+  pod 'CBFlashyTabBarController'
+  
+end

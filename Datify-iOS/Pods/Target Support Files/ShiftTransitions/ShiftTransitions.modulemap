@@ -1,0 +1,6 @@
+framework module ShiftTransitions {
+  umbrella header "ShiftTransitions-umbrella.h"
+
+  export *
+  module * { export * }
+}

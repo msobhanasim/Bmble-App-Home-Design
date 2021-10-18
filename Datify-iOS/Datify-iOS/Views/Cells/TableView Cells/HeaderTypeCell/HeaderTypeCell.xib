@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderTypeCell" rowHeight="466" id="KGk-i7-Jjw" customClass="HeaderTypeCell" customModule="Datify_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="466"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="466"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="girl" translatesAutoresizingMaskIntoConstraints="NO" id="iL2-pe-Kbz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="466"/>
+                    </imageView>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="HYZ-Ej-544">
+                        <rect key="frame" x="20" y="14" width="335" height="50"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="AdR-5Z-Y1O"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="10" id="i41-US-7tf">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7ah-ZV-2Zy">
+                        <rect key="frame" x="25" y="332" width="205" height="119"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why-as Eye Are, 23" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAg-nV-bgU">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="3Br-aE-Lss"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FEF-aY-Kxh">
+                                <rect key="frame" x="0.0" y="63" width="205" height="23"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HNh-33-mKD">
+                                        <rect key="frame" x="0.0" y="1.5" width="23" height="18.5"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="23" id="aPH-Ax-Jpb"/>
+                                            <constraint firstAttribute="width" secondItem="HNh-33-mKD" secondAttribute="height" multiplier="1:1" id="mZP-j0-6Y8"/>
+                                        </constraints>
+                                        <imageReference key="image" image="bag" catalog="system" symbolScale="small" renderingMode="template"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content Writer at Freelance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFU-Wt-ipP">
+                                        <rect key="frame" x="33" y="0.0" width="172" height="23"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ebd-Bs-2aA">
+                                <rect key="frame" x="0.0" y="96" width="167" height="23"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bEm-kV-2aK">
+                                        <rect key="frame" x="0.0" y="2.5" width="23" height="21.5"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="23" id="Rnw-kr-zF7"/>
+                                            <constraint firstAttribute="width" secondItem="bEm-kV-2aK" secondAttribute="height" multiplier="1:1" id="adT-To-fDy"/>
+                                        </constraints>
+                                        <imageReference key="image" image="graduationcap" catalog="system" symbolScale="small"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Town University 2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXz-SF-C9x">
+                                        <rect key="frame" x="33" y="0.0" width="134" height="23"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="dAg-nV-bgU" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.4" id="8cJ-iq-LLu"/>
+                    <constraint firstItem="7ah-ZV-2Zy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="9f7-W9-lSh"/>
+                    <constraint firstAttribute="trailing" secondItem="HYZ-Ej-544" secondAttribute="trailing" constant="20" symbolic="YES" id="KnR-kC-lJv"/>
+                    <constraint firstItem="iL2-pe-Kbz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ZFL-72-yFn"/>
+                    <constraint firstAttribute="bottom" secondItem="7ah-ZV-2Zy" secondAttribute="bottom" constant="15" id="dsP-9o-zPU"/>
+                    <constraint firstItem="HYZ-Ej-544" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="pZ0-Rt-5V5"/>
+                    <constraint firstAttribute="bottom" secondItem="iL2-pe-Kbz" secondAttribute="bottom" id="qA0-8d-SJE"/>
+                    <constraint firstItem="HYZ-Ej-544" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="taX-4H-Umj"/>
+                    <constraint firstAttribute="trailing" secondItem="iL2-pe-Kbz" secondAttribute="trailing" id="uhX-EM-Bl5"/>
+                    <constraint firstItem="iL2-pe-Kbz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="yCd-kM-sZO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="educationImg" destination="bEm-kV-2aK" id="Peo-CQ-lME"/>
+                <outlet property="educationLbl" destination="LXz-SF-C9x" id="gmx-Bx-o5O"/>
+                <outlet property="educationStackView" destination="ebd-Bs-2aA" id="2y5-iF-rDU"/>
+                <outlet property="occupationImg" destination="HNh-33-mKD" id="QPM-bT-tYF"/>
+                <outlet property="occupationLbl" destination="dFU-Wt-ipP" id="T8U-y3-CXf"/>
+                <outlet property="occupationStackView" destination="FEF-aY-Kxh" id="ZhI-5v-6PG"/>
+                <outlet property="userNameLbl" destination="dAg-nV-bgU" id="Iqj-Lt-PzR"/>
+                <outlet property="userPhotoImg" destination="iL2-pe-Kbz" id="9oT-1f-c3e"/>
+                <outlet property="userProfileTagsCollView" destination="HYZ-Ej-544" id="XAN-AN-u3I"/>
+            </connections>
+            <point key="canvasLocation" x="64.492753623188406" y="207.58928571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="bag" catalog="system" width="128" height="128"/>
+        <image name="girl" width="372" height="519"/>
+        <image name="graduationcap" catalog="system" width="128" height="106"/>
+    </resources>
+</document>

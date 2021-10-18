@@ -1,0 +1,60 @@
+PODS:
+  - AdvancedPageControl (0.9.0)
+  - BRYXBanner (0.8.4)
+  - CBFlashyTabBarController (0.8.3)
+  - GSImageViewerController (1.6.3)
+  - Hero (1.6.1)
+  - lottie-ios (3.2.3)
+  - MBProgressHUD (1.2.0)
+  - NeumorphismKit (0.2.0)
+  - ShiftTransitions (0.1.2)
+  - SimpleAnimation (0.4.2)
+  - SkeletonView (1.24.4)
+  - TweenKit (1.0.3)
+
+DEPENDENCIES:
+  - AdvancedPageControl
+  - BRYXBanner
+  - CBFlashyTabBarController
+  - GSImageViewerController
+  - Hero
+  - lottie-ios
+  - MBProgressHUD
+  - NeumorphismKit (~> 0.2)
+  - ShiftTransitions
+  - SimpleAnimation
+  - SkeletonView
+  - TweenKit
+
+SPEC REPOS:
+  trunk:
+    - AdvancedPageControl
+    - BRYXBanner
+    - CBFlashyTabBarController
+    - GSImageViewerController
+    - Hero
+    - lottie-ios
+    - MBProgressHUD
+    - NeumorphismKit
+    - ShiftTransitions
+    - SimpleAnimation
+    - SkeletonView
+    - TweenKit
+
+SPEC CHECKSUMS:
+  AdvancedPageControl: 39e3b32b00b2d324c534f8e17cc6c5be9abe84b7
+  BRYXBanner: 4fbd266f96ce000e4c6cc9a0558c446bd88d9801
+  CBFlashyTabBarController: bc6b11dd4cbc9b54785c8944156e2f4d4f03b088
+  GSImageViewerController: 20a257d7e3dd9ee171c2dfea659992eba2761839
+  Hero: 215865ba3ae41dd9bb08cd6c60a645529c6fc94b
+  lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  NeumorphismKit: 98f2dae46ca40e05029620aa907c653150974430
+  ShiftTransitions: d728534308eebf9076be10e301349f745e3c3396
+  SimpleAnimation: 5430010b9548f392e7459290acce01c9ceba7171
+  SkeletonView: c8632f212fcce7b7ba742c3d4a5af3596b5fa5ae
+  TweenKit: 7f32dbdda44609be0cfb3fe853af9562cd1e3564
+
+PODFILE CHECKSUM: 73f470812e5abcbc7b6415a2640c534f9e3ada17
+
+COCOAPODS: 1.10.1

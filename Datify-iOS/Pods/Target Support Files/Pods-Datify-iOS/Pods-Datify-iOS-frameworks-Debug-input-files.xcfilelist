@@ -1,0 +1,13 @@
+${PODS_ROOT}/Target Support Files/Pods-Datify-iOS/Pods-Datify-iOS-frameworks.sh
+${BUILT_PRODUCTS_DIR}/AdvancedPageControl/AdvancedPageControl.framework
+${BUILT_PRODUCTS_DIR}/BRYXBanner/BRYXBanner.framework
+${BUILT_PRODUCTS_DIR}/CBFlashyTabBarController/CBFlashyTabBarController.framework
+${BUILT_PRODUCTS_DIR}/GSImageViewerController/GSImageViewerController.framework
+${BUILT_PRODUCTS_DIR}/Hero/Hero.framework
+${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework
+${BUILT_PRODUCTS_DIR}/NeumorphismKit/NeumorphismKit.framework
+${BUILT_PRODUCTS_DIR}/ShiftTransitions/ShiftTransitions.framework
+${BUILT_PRODUCTS_DIR}/SimpleAnimation/SimpleAnimation.framework
+${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework
+${BUILT_PRODUCTS_DIR}/TweenKit/TweenKit.framework
+${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework
