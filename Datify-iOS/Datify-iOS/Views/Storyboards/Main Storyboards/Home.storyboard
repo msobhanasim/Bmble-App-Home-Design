@@ -208,6 +208,8 @@
                         <outlet property="noDataViewDescription" destination="eAt-Iq-aIY" id="8TL-uh-whd"/>
                         <outlet property="noDataViewImage" destination="KBO-DT-tGH" id="FYa-Lj-3Hj"/>
                         <outlet property="noDataViewTitle" destination="C0R-3R-325" id="AiW-ir-WUN"/>
+                        <outlet property="scrollViewIndicatorContainerView" destination="IwK-Vb-6NZ" id="uVZ-St-oar"/>
+                        <outlet property="scrollViewIndicatorView" destination="qI4-VE-vEK" id="FSa-Aw-fhc"/>
                         <outlet property="scrollViewIndicatorViewTopCons" destination="YXa-TJ-go0" id="r5O-sJ-6l6"/>
                         <outlet property="unlikedIcon" destination="wf8-RJ-ZUX" id="HS7-67-wGL"/>
                         <outlet property="unlikedIconMidConstraint" destination="tfG-uY-d1d" id="HS4-wW-Xp4"/>

@@ -24,6 +24,8 @@ class HomeVC: BaseViewController {
     
     /// `Scroll View indicator view top Constraint`
     @IBOutlet weak var scrollViewIndicatorViewTopCons: NSLayoutConstraint!
+    @IBOutlet weak var scrollViewIndicatorContainerView: UIView!
+    @IBOutlet weak var scrollViewIndicatorView: UIView!
     
     /// `No Data View Outlets`
     @IBOutlet weak var noDataView           : UIView!
@@ -54,7 +56,7 @@ class HomeVC: BaseViewController {
     func setViews() {
         cardStack.delegate = self
         cardStack.dataSource = self
-        
+        scrollViewIndicatorViewTopCons.constant = 0
         cardsParentView.addSubview(cardStack)
         
         cardStack.anchor(top: cardsParentView.safeAreaLayoutGuide.topAnchor,
@@ -263,9 +265,24 @@ extension HomeVC : SwipeCardStackDelegate , SwipeCardStackDataSource {
 
 //MARK:- ShuffleCardContentView's TableView Scroll Delegate
 extension HomeVC : ShuffleCardContentViewDelegate {
+    
     func contentScrollViewDidScroll(_ scrollView: UIScrollView) {
+        let scrollPercent = (scrollView.contentOffset.y / scrollView.contentSize.height)
         
+        let indicatorViewHeight = scrollViewIndicatorView.frame.height
+        let indicatorContainerViewHeight = scrollViewIndicatorContainerView.frame.height
+        
+        let substractiveFactor = (indicatorViewHeight / indicatorContainerViewHeight) * indicatorViewHeight
+        
+        let totalHeightWithAdjustedConstraints = indicatorContainerViewHeight - substractiveFactor
+        
+        
+        scrollViewIndicatorViewTopCons.constant = (scrollPercent * totalHeightWithAdjustedConstraints)
+        
+        print("scrollViewIndicatorViewTopCons.constant = (scrollPercent * totalHeightWithAdjustedConstraints) >>>", (scrollPercent * totalHeightWithAdjustedConstraints))
+
     }
+    
 }
 
 
