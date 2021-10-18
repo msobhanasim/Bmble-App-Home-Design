@@ -24,7 +24,19 @@
 
 import UIKit
 
+
+
+@objc public protocol ShuffleCardContentViewDelegate: AnyObject{
+    
+    @objc
+    optional func contentScrollViewDidScroll(_ scrollView: UIScrollView)
+    
+}
+
+
 class ShuffleCardContentView: UIView {
+    
+    weak var delegate: ShuffleCardContentViewDelegate?
     
     private var isVerified : Bool = false
     private var verifiedImage  : UIImageView = {
@@ -189,8 +201,6 @@ extension ShuffleCardContentView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        
-        
         switch indexPath.section {
         case 0:
             let tableViewCell = tableView.dequeueReusableCell(withIdentifier: HeaderTypeCell.identifier, for: indexPath) as! HeaderTypeCell
@@ -249,6 +259,10 @@ extension ShuffleCardContentView: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
             
         }
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        delegate?.contentScrollViewDidScroll?(scrollView)
     }
     
     

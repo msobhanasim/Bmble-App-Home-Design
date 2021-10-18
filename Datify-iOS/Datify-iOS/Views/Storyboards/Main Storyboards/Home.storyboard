@@ -115,6 +115,48 @@
                                             <constraint firstAttribute="height" constant="100" id="eT1-8I-59a"/>
                                         </constraints>
                                     </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IwK-Vb-6NZ">
+                                        <rect key="frame" x="366" y="70" width="8" height="100"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qI4-VE-vEK">
+                                                <rect key="frame" x="0.0" y="0.0" width="8" height="25"/>
+                                                <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="8rA-2d-Th1"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="8" id="Wse-0U-ZrO"/>
+                                            <constraint firstItem="qI4-VE-vEK" firstAttribute="leading" secondItem="IwK-Vb-6NZ" secondAttribute="leading" id="XNn-RJ-atu"/>
+                                            <constraint firstItem="qI4-VE-vEK" firstAttribute="top" secondItem="IwK-Vb-6NZ" secondAttribute="top" id="YXa-TJ-go0"/>
+                                            <constraint firstAttribute="trailing" secondItem="qI4-VE-vEK" secondAttribute="trailing" id="coH-WV-ugu"/>
+                                            <constraint firstAttribute="height" constant="100" id="mry-Ro-65m"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.20000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -126,7 +168,9 @@
                                     <constraint firstItem="pJe-tf-76t" firstAttribute="leading" secondItem="JnJ-KH-ye3" secondAttribute="leading" id="EZR-iy-ahv"/>
                                     <constraint firstItem="OkI-8x-uHB" firstAttribute="centerX" secondItem="JnJ-KH-ye3" secondAttribute="centerX" id="JbW-p7-3cS"/>
                                     <constraint firstItem="OkI-8x-uHB" firstAttribute="centerY" secondItem="pJe-tf-76t" secondAttribute="centerY" id="Js9-OE-Acg"/>
+                                    <constraint firstAttribute="trailing" secondItem="IwK-Vb-6NZ" secondAttribute="trailing" constant="40" id="Ylm-y4-54t"/>
                                     <constraint firstItem="wf8-RJ-ZUX" firstAttribute="centerY" secondItem="pJe-tf-76t" secondAttribute="centerY" id="ey5-Dp-9Cl"/>
+                                    <constraint firstItem="IwK-Vb-6NZ" firstAttribute="top" secondItem="JnJ-KH-ye3" secondAttribute="top" constant="70" id="k0R-bI-C7R"/>
                                     <constraint firstItem="OkI-8x-uHB" firstAttribute="height" secondItem="pJe-tf-76t" secondAttribute="height" multiplier="0.8" id="ksq-wY-mie"/>
                                     <constraint firstItem="wf8-RJ-ZUX" firstAttribute="centerX" secondItem="pJe-tf-76t" secondAttribute="centerX" constant="-300" id="tfG-uY-d1d"/>
                                     <constraint firstAttribute="bottom" secondItem="pJe-tf-76t" secondAttribute="bottom" id="uSl-bO-fpT"/>
@@ -164,13 +208,14 @@
                         <outlet property="noDataViewDescription" destination="eAt-Iq-aIY" id="8TL-uh-whd"/>
                         <outlet property="noDataViewImage" destination="KBO-DT-tGH" id="FYa-Lj-3Hj"/>
                         <outlet property="noDataViewTitle" destination="C0R-3R-325" id="AiW-ir-WUN"/>
+                        <outlet property="scrollViewIndicatorViewTopCons" destination="YXa-TJ-go0" id="r5O-sJ-6l6"/>
                         <outlet property="unlikedIcon" destination="wf8-RJ-ZUX" id="HS7-67-wGL"/>
                         <outlet property="unlikedIconMidConstraint" destination="tfG-uY-d1d" id="HS4-wW-Xp4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rQK-8K-gr4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1296" y="13"/>
+            <point key="canvasLocation" x="1295.6521739130435" y="12.723214285714285"/>
         </scene>
     </scenes>
     <resources>

@@ -22,6 +22,9 @@ class HomeVC: BaseViewController {
     @IBOutlet weak var unlikedIconMidConstraint: NSLayoutConstraint! // -300 for hide/ 0 for middle screen
     @IBOutlet weak var likedIconMidConstraint: NSLayoutConstraint! // 300 for hide/ 0 for middle screen
     
+    /// `Scroll View indicator view top Constraint`
+    @IBOutlet weak var scrollViewIndicatorViewTopCons: NSLayoutConstraint!
+    
     /// `No Data View Outlets`
     @IBOutlet weak var noDataView           : UIView!
     @IBOutlet weak var noDataViewImage      : UIImageView!
@@ -188,12 +191,11 @@ extension HomeVC : SwipeCardStackDelegate , SwipeCardStackDataSource {
             card.setOverlay(ShuffleCardOverlay(direction: direction), forDirection: direction)
         }
         
-//        let model = homeViewModel.getUserItemAtIndexPath(indexPath: IndexPath(item: index, section: 0))
+        let contentView = ShuffleCardContentView(withImageUrl: "", placeHolder: #imageLiteral(resourceName: "star"), verified: false)
+        contentView.delegate = self
         
-        card.content = ShuffleCardContentView(withImageUrl: "", placeHolder: #imageLiteral(resourceName: "star"), verified: false)
+        card.content = contentView
         
-         
-//        card.footer = ShuffleCardFooterView(withTitle: ((model.userFirstName ?? "") + " " +  (model.userLastName ?? "")), subtitle: "User # (\(index + 1)")
         return card
         
     }
@@ -258,6 +260,14 @@ extension HomeVC : SwipeCardStackDelegate , SwipeCardStackDataSource {
     }
     
 }
+
+//MARK:- ShuffleCardContentView's TableView Scroll Delegate
+extension HomeVC : ShuffleCardContentViewDelegate {
+    func contentScrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+    }
+}
+
 
 
 /*
