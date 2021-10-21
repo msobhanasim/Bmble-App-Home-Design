@@ -47,24 +47,16 @@ class ShuffleCardContentView: UIView {
     
     private let backgroundView: UIView = {
         let background = UIView()
-        background.clipsToBounds = true
-        background.layer.cornerRadius = 18
+        background.clipsToBounds = false
+//        background.layer.cornerRadius = 18
         return background
     }()
     
     private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.contentMode = .scaleAspectFill
+        tableView.delaysContentTouches = false
         return tableView
-    }()
-    
-    private let gradientLayer: CAGradientLayer = {
-        let gradient = CAGradientLayer()
-        gradient.colors = [UIColor.black.withAlphaComponent(0.01).cgColor,
-                           UIColor.black.withAlphaComponent(0.8).cgColor]
-        gradient.startPoint = CGPoint(x: 0.5, y: 0)
-        gradient.endPoint = CGPoint(x: 0.5, y: 1)
-        return gradient
     }()
     
     init(withImage image: UIImage? , verified : Bool) {
@@ -111,7 +103,7 @@ class ShuffleCardContentView: UIView {
         addSubview(backgroundView)
         backgroundView.anchorToSuperview()
         setupTableView()
-        applyShadow(radius: 8, opacity: 0.2, offset: CGSize(width: 0, height: 2))
+//        applyShadow(radius: 8, opacity: 0.2, offset: CGSize(width: 0, height: 2))
         
         if isVerified {
             verifiedImage.image = #imageLiteral(resourceName: "favourite")

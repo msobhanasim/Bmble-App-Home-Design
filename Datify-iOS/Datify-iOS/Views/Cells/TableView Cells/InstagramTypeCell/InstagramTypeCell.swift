@@ -35,13 +35,13 @@ class InstagramTypeCell: UITableViewCell {
         instagramPhotos = [
             "andrew",
             "bailey",
-//            "daiane",
-//            "andrew",
-//            "bailey",
-//            "daiane",
-//            "andrew",
-//            "bailey",
-//            "daiane"
+            "daiane",
+            "andrew",
+            "bailey",
+            "daiane",
+            "andrew",
+            "bailey",
+            "daiane"
 
         ]
 
@@ -63,12 +63,13 @@ class InstagramTypeCell: UITableViewCell {
     
     
     func configureHeight(){
-//        instagramCollectionViewHeightConstraint.constant = 400
-        instagramCollectionViewHeightConstraint.constant = instagramCollectionView.collectionViewLayout.collectionViewContentSize.height + 8
+        
         if bounds.size != instagramCollectionView.collectionViewLayout.collectionViewContentSize {
             instagramCollectionView.invalidateIntrinsicContentSize()
             instagramCollectionView.collectionViewLayout.invalidateLayout()
         }
+        
+        instagramCollectionViewHeightConstraint.constant = instagramCollectionView.collectionViewLayout.collectionViewContentSize.height
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -106,7 +107,7 @@ extension InstagramTypeCell : UICollectionViewDelegate, UICollectionViewDataSour
         sizeForItemAt indexPath: IndexPath
       ) -> CGSize {
         // 2
-        let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
+        let paddingSpace = sectionInsets.left * (itemsPerRow)
         let availableWidth = collectionView.frame.width - paddingSpace
         let widthPerItem = availableWidth / itemsPerRow
         

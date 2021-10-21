@@ -27,6 +27,8 @@ class HomeVC: BaseViewController {
     @IBOutlet weak var scrollViewIndicatorContainerView: UIView!
     @IBOutlet weak var scrollViewIndicatorView: UIView!
     
+    @IBOutlet weak var parentCardViewScrollView: UIScrollView!
+    
     /// `No Data View Outlets`
     @IBOutlet weak var noDataView           : UIView!
     @IBOutlet weak var noDataViewImage      : UIImageView!
@@ -56,17 +58,21 @@ class HomeVC: BaseViewController {
     func setViews() {
         cardStack.delegate = self
         cardStack.dataSource = self
+        parentCardViewScrollView.delegate = self
         scrollViewIndicatorViewTopCons.constant = 0
         cardsParentView.addSubview(cardStack)
-        
+        cardsParentView.cornerRadius = 18
+        cardsParentView.clipsToBounds = true
         cardStack.anchor(top: cardsParentView.safeAreaLayoutGuide.topAnchor,
                          left: cardsParentView.safeAreaLayoutGuide.leftAnchor,
                          bottom: cardsParentView.safeAreaLayoutGuide.bottomAnchor,
                          right: cardsParentView.safeAreaLayoutGuide.rightAnchor,
-                         paddingTop: 20,
-                         paddingLeft: 5,
-                         paddingBottom: 12,
-                         paddingRight: 5)
+                         paddingTop: -20,
+                         paddingLeft: -10,
+                         paddingBottom: -12,
+                         paddingRight: -10)
+        parentCardViewScrollView.delaysContentTouches = true
+//        cardsParentView.applyShadow(radius: 8, opacity: 0.2, offset: CGSize(width: 0, height: 2))
         
         
     }
@@ -142,7 +148,6 @@ extension HomeVC : SwipeCardStackDelegate , SwipeCardStackDataSource {
                 } else {
                     unlikedIconMidConstraint.constant = 0
                 }
-                
             }
             
             min = Int(horizontalPoint)
@@ -240,9 +245,7 @@ extension HomeVC : SwipeCardStackDelegate , SwipeCardStackDataSource {
             case .left:
                 print("left")
                 
-                
             case .right:
-                
                 print("right")
                 
             case .up:
@@ -267,6 +270,7 @@ extension HomeVC : SwipeCardStackDelegate , SwipeCardStackDataSource {
 extension HomeVC : ShuffleCardContentViewDelegate {
     
     func contentScrollViewDidScroll(_ scrollView: UIScrollView) {
+    
         let scrollPercent = (scrollView.contentOffset.y / scrollView.contentSize.height)
         
         let indicatorViewHeight = scrollViewIndicatorView.frame.height
@@ -276,10 +280,19 @@ extension HomeVC : ShuffleCardContentViewDelegate {
         
         let totalHeightWithAdjustedConstraints = indicatorContainerViewHeight - substractiveFactor
         
-        
         scrollViewIndicatorViewTopCons.constant = (scrollPercent * totalHeightWithAdjustedConstraints)
         
-        print("scrollViewIndicatorViewTopCons.constant = (scrollPercent * totalHeightWithAdjustedConstraints) >>>", (scrollPercent * totalHeightWithAdjustedConstraints))
+//        if (scrollViewIndicatorViewTopCons.constant == 0 &&
+//            parentCardViewScrollView.contentOffset.y <= 0) || ((scrollViewIndicatorViewTopCons.constant >= 77.58) &&
+//            parentCardViewScrollView.contentOffset.y >= 0){
+//            parentCardViewScrollView.isScrollEnabled = true
+//        } else {
+//            parentCardViewScrollView.isScrollEnabled = false
+//        }
+        
+//        print("scrollViewIndicatorViewTopCons.constant = (scrollPercent * totalHeightWithAdjustedConstraints) >>>", (scrollPercent * totalHeightWithAdjustedConstraints))
+        
+        print("parentCardViewScrollView.contentOffset.y > 0", parentCardViewScrollView.contentOffset.y)
 
     }
     
@@ -326,3 +339,11 @@ extension HomeVC : ShuffleCardContentViewDelegate {
 }
  
  */
+
+
+
+extension HomeVC: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        print("parentCardViewScrollView.contentOffset.y > 0", scrollView.contentOffset.y)
+    }
+}
